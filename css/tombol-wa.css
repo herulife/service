@@ -1,0 +1,101 @@
+/* */
+/* tombool wa */
+.wa-button {
+    position: fixed;            
+    bottom: 20px;                /* Posisikan tombol di bagian bawah layar */
+    right: 15px;                 /* Posisikan tombol di bagian kanan layar */
+    z-index: 1000;               /* Pastikan tombol ada di atas elemen lain */
+    background-color: #198754;   /* Warna hijau khas WhatsApp */
+    padding: 10px;               /* Ruang agar ikon tidak terlalu kecil */
+    border-radius: 8px;          /* Sudut tombol melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    width: 40px;                 /* Lebar tombol saat default */
+    height: 40px;                /* Tinggi tombol agar berbentuk kotak */
+    text-decoration: none;        /* Hilangkan garis bawah pada link */
+    color: white;                /* Warna teks putih */
+    font-family: "Poppins", sans-serif; /* Gunakan font Poppins */
+    font-size: 16px;             /* Ukuran font */
+    display: block;               /* Gunakan flex untuk menyusun isi tombol */
+    align-items: center;         /* Pusatkan ikon secara vertikal */
+    justify-content: center;     /* Pusatkan ikon secara horizontal */
+    transition: width 0.3s ease; /* Animasi saat tombol diperbesar */
+    overflow: hidden;            /* Sembunyikan teks sebelum hover */
+    white-space: nowrap;         /* Mencegah teks turun ke baris baru */
+  }
+  
+  .wa-button img {
+    width: 24px;                 /* Ukuran ikon WhatsApp */
+    height: 24px;                /* Sesuaikan agar tetap proporsional */
+    
+  }
+  
+  
+  .wa-text {
+    opacity: 0;                  /* Sembunyikan teks saat default */
+    margin-left: 10px;           /* Jarak antara ikon dan teks */
+    transition: opacity 0.3s ease; /* Efek teks muncul perlahan */
+    display: inline-block;        /* Pastikan teks tetap ada */
+  }
+  
+  .wa-button:hover {
+    width: 180px;                /* Perbesar tombol saat di-hover */
+    background-color: #1ebe5d;   /* Warna tombol lebih gelap saat hover */
+    justify-content: flex-start; /* Geser ikon ke kiri agar teks muncul */
+    padding-left: 15px;          /* Tambahkan padding agar teks tidak mepet */
+  }
+  
+  .wa-button:hover .wa-text {
+    opacity: 1;                  /* Munculkan teks saat hover */
+  }
+
+  @media (max-width: 768px) {
+    
+      
+      
+      .wa-text {
+        opacity: 0;                  /* Sembunyikan teks saat default */
+        margin-left: 10px;           /* Jarak antara ikon dan teks */
+        transition: opacity 0.3s ease; /* Efek teks muncul perlahan */
+        display: inline-block;        /* Pastikan teks tetap ada */
+      }
+      
+      .wa-button:hover {
+        width: 180px;                /* Perbesar tombol saat di-hover */
+        background-color: #1ebe5d;   /* Warna tombol lebih gelap saat hover */
+        justify-content: flex-start; /* Geser ikon ke kiri agar teks muncul */
+        padding-left: 15px;          /* Tambahkan padding agar teks tidak mepet */
+      }
+      
+      .wa-button:hover .wa-text {
+        opacity: 1;                  /* Munculkan teks saat hover */
+      }
+      .wa-button {
+        position: fixed;            
+        right: 5px;                 /* Posisikan tombol di bagian kanan layar */
+        z-index: 1000;               /* Pastikan tombol ada di atas elemen lain */
+        background-color: #ffffff;   /* Warna hijau khas WhatsApp */
+                      /* Ruang agar ikon tidak terlalu kecil */
+        border-radius: 8px;          /* Sudut tombol melengkung */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+        width: 30px;                 /* Lebar tombol saat default */
+        height: 35px;                /* Tinggi tombol agar berbentuk kotak */
+        text-decoration: none;        /* Hilangkan garis bawah pada link */
+        color: white;                /* Warna teks putih */
+        font-family: "Poppins", sans-serif; /* Gunakan font Poppins */
+        font-size: 16px;             /* Ukuran font */
+        display: block;               /* Gunakan flex untuk menyusun isi tombol */
+        align-items: center;         /* Pusatkan ikon secara vertikal */
+        justify-content: center;     /* Pusatkan ikon secara horizontal */
+        transition: width 0.3s ease; /* Animasi saat tombol diperbesar */
+        overflow: hidden;            /* Sembunyikan teks sebelum hover */
+        white-space: nowrap;         /* Mencegah teks turun ke baris baru */
+      }
+      .wa-button img {
+        width: 20px;                 /* Ukuran ikon WhatsApp */
+        height: 20px;                /* Sesuaikan agar tetap proporsional */
+                  /* Memastikan ikon tetap terlihat */
+      }
+      
+  }
+
+ 
