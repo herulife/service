@@ -1,0 +1,133 @@
+================================================================
+PANDUAN PROMOSI & TRACKING — BENUA KOMPUTER
+Service Laptop & MacBook Tasikmalaya
+================================================================
+
+CATATAN PENTING
+---------------
+Website https://benuatech.my.id SUDAH LIVE & jalan normal.
+File ini berisi panduan promosi + tracking (Google Analytics &
+Search Console) serta teks siap tempel untuk daftar direktori.
+
+Yang perlu ANDA lakukan:
+  1. Kirim ke admin/AI: ID GA4 (format G-XXXXXXX)
+  2. Kirim ke admin/AI: Kode verifikasi Google Search Console
+  3. Daftar sendiri ke Google Business Profile, Bing, Facebook, OLX
+     (cukup copy-paste teks di bawah).
+
+================================================================
+BAGIAN 1 — AMBIL ID GOOGLE ANALYTICS (lihat jumlah pengunjung)
+================================================================
+1. Buka https://analytics.google.com
+2. Login pakai email candraloka81@gmail.com (tombol "Gunakan Akun Google").
+3. Klik "Buat Akun" -> nama akun: Benua Komputer -> Berikutnya.
+4. Buat Property: nama "Benua Komputer", Negara Indonesia,
+   Zona waktu (GMT+07:00) Jakarta -> Berikutnya.
+5. Pilih jenis bisnis (bebas) -> Berikutnya -> isi nama Anda -> Berikutnya.
+6. Pilih "Pengukuran Web" (bukan App).
+7. Halaman Data Stream: pilih Web, isi:
+     URL situs web : https://benuatech.my.id
+     Nama stream   : Benua Komputer Web
+   -> Klik Buat Stream.
+8. Akan muncul "Web stream details". Cari tulisan Measurement ID
+   berbentuk G-XXXXXXX (contoh: G-AB12CD34EF).
+9. Copy ID itu, lalu kirim ke admin/AI.
+
+================================================================
+BAGIAN 2 — VERIFIKASI GOOGLE SEARCH CONSOLE
+================================================================
+1. Buka https://search.google.com/search-console/ -> login email sama.
+2. Klik "Tambahkan Properti" -> ketik https://benuatech.my.id -> Lanjutkan.
+3. Pilih metode "Domain" (paling gampang, cukup 1 baris DNS).
+4. Google tampilkan kode: google-site-verification=ABCdefGHI...
+5. Copy SELURUH kode itu, kirim ke admin/AI.
+   -> Admin yang tambahkan ke DNS Cloudflare. Lalu Anda klik Verifikasi.
+
+Alternatif: setelah Bagian 1 selesai, di GSC pilih verifikasi
+lewat "Google Analytics" -> otomatis terverifikasi (tanpa DNS).
+
+================================================================
+BAGIAN 3 — DAFTAR GOOGLE BUSINESS PROFILE (paling penting lokal)
+================================================================
+1. Buka https://business.google.com/ -> "Buat profil".
+2. Isi:
+     Nama      : Benua Komputer
+     Kategori  : Computer repair service
+     Alamat    : Jl. Raya Awipari Tengah RT03/RW03, Cibeureum, Tasikmalaya
+     Telepon   : 0821-1475-2228
+     Jam       : Senin-Sabtu 08.00-20.30
+     Website   : https://benuatech.my.id
+3. Kolom Deskripsi: copy teks "DESKRIPSI PANJANG" di bawah.
+4. Verifikasi lewat poscard (surat berisi kode ke alamat) atau telepon.
+
+================================================================
+BAGIAN 4 — CITATION KIT (teks siap tempel)
+================================================================
+
+--- NAP MASTER (salin PERSIS di semua situs) ---
+Nama Usaha : Benua Komputer
+Kategori   : Service Laptop / Computer Repair
+Alamat     : Jl. Raya Awipari Tengah RT03/RW03, Awipari, Kec. Cibeureum, Kota Tasikmalaya, Jawa Barat 46196
+Telepon/WA : 0821-1475-2228
+Email      : candraloka81@gmail.com
+Jam        : Senin-Sabtu 08.00-20.30
+Website    : https://benuatech.my.id
+
+--- DESKRIPSI PENDEK (~160 karakter) ---
+Benua Komputer - service laptop & MacBook Tasikmalaya. Mati total, ganti layar, mainboard, instal OS. Bisa ditunggu, bergaransi. WA 0821-1475-2228.
+
+--- DESKRIPSI MENENGAH (~300 karakter) ---
+Benua Komputer melayani service laptop & MacBook di Tasikmalaya dan sekitarnya (Cibeureum, Singaparna, Indihiang, Mangkubumi). Handle mati total, ganti layar/LCD, service mainboard, reballing VGA, instal OS, ganti baterai & keyboard. Teknisi berpengalaman, pengerjaan bisa ditunggu, hasil bergaransi. Konsultasi gratis via WhatsApp 0821-1475-2228.
+
+--- DESKRIPSI PANJANG (GBP "From the Business", <=750 karakter) ---
+Benua Komputer adalah spesialis service laptop & MacBook di Tasikmalaya sejak melayani warga Cibeureum, Singaparna, Indihiang, Mangkubumi, Kawalu, dan sekitarnya. Kami menangani laptop mati total, tidak nyala, ganti layar/LCD-LED, service mainboard, reballing VGA, ganti IC power, instal ulang Windows/macOS, virus, ganti baterai & keyboard, serta service MacBook kena air. Keunggulan kami: teknisi berpengalaman, pengerjaan bisa ditunggu di workshop Awipari, hasil bergaransi, dan harga transparan. Buka Senin-Sabtu 08.00-20.30. Konsultasi & perkiraan biaya gratis via WhatsApp 0821-1475-2228.
+
+--- GOOGLE BUSINESS PROFILE ---
+Nama      : Benua Komputer
+Kategori  : Computer repair service (tambahan: Laptop repair, Mac repair)
+Alamat    : Jl. Raya Awipari Tengah RT03/RW03, Awipari, Kec. Cibeureum
+Jam       : Senin 08.00-20.30, Selasa-Jumat 08.00-20.30, Sabtu 08.00-20.30, Minggu Tutup
+Telepon   : 0821-1475-2228
+Website   : https://benuatech.my.id
+Deskripsi : pakai teks panjang di atas.
+
+--- BING PLACES / FACEBOOK PAGE ---
+Pakai NAP master + deskripsi menengah. Facebook: isi "Tentang" dengan
+deskripsi panjang & pasang tombol "Hubungi lewat WhatsApp".
+
+--- OLX.CO.ID (Judul + Body) ---
+Judul: Jasa Service Laptop & MacBook Tasikmalaya - Bisa Ditunggu, Bergaransi
+Body : Melayani service laptop & MacBook area Tasikmalaya & sekitar. Mati total, ganti layar, mainboard, instal OS, baterai, keyboard. Teknisi berpengalaman, bisa ditunggu di workshop Cibeureum, bergaransi. Konsultasi gratis WA 0821-1475-2228. Kunjungi https://benuatech.my.id
+
+--- FORUM / GRUP (Tasikmalaya, Kaskus regional) ---
+Salam, kami Benua Komputer - jasa service laptop & MacBook di Tasikmalaya
+(workshop di Cibeureum). Handle mati total, ganti layar, mainboard, MacBook
+kena air, dll. Bisa ditunggu & bergaransi. Info & konsultasi gratis WA
+0821-1475-2228 / https://benuatech.my.id
+
+--- PITCH KE MEDIA LOKAL (Radar Tasikmalaya, Tasikzone, Simantab) ---
+Halo, saya dari Benua Komputer, jasa service laptop & MacBook di Tasikmalaya
+(Cibeureum). Boleh minta saran agar warga Tasikmalaya lebih waspada ciri
+laptop rusak & tahu opsi servis bergaransi? Siap diwawancara/quote singkat.
+Kontak WA 0821-1475-2228.
+
+================================================================
+DAFTAR DIREKTORI WAJIB
+================================================================
+1. Google Business Profile - https://business.google.com
+2. Bing Places            - https://www.bing.com/business
+3. Facebook Page          - https://www.facebook.com/pages/create
+4. OLX                    - https://www.olx.co.id
+5. Yellow Pages ID        - https://www.indonesiayp.com
+6. Cylex                  - https://www.cylex.co.id
+7. Lacartes              - https://www.lacartes.com
+8. Grup FB: "Tasikmalaya", "Info Cibeureum", "Jual Beli Tasikmalaya"
+9. Forum: Kaskus Regional Jabar
+
+================================================================
+CARA SIMPAN FILE INI KE DESKTOP ANDA
+================================================================
+File ini ada di repository GitHub:
+https://github.com/herulife/service/blob/feat/cloudflare-pages/PANDUAN.txt
+Buka link -> klik tombol "Raw" -> klik kanan "Save as" / simpan ke Desktop.
+================================================================
