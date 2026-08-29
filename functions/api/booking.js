@@ -22,7 +22,7 @@ export async function onRequestPost(context) {
       .bind(name, wa, merk, kerusakan, kecamatan)
       .run();
 
-    const id = info.meta?.lastRowId ?? null;
+    const id = info.meta?.last_row_id ?? null;
 
     // Format pesan WhatsApp ke admin
     const waMsg =

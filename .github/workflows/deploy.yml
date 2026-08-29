@@ -33,8 +33,6 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
-      - name: Attach custom domain
-        run: wrangler pages domain add benuatech.my.id --project-name benuatech
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      # Custom domain (benuatech.my.id) is attached once via the Cloudflare
+      # dashboard (DNS: add CNAME benuatech.my.id -> benuatech.pages.dev, proxied)
+      # or via the API. This needs Zone:DNS permissions the deploy token lacks.
