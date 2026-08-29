@@ -1,0 +1,14 @@
+{
+  "name": "benuatech-service",
+  "version": "1.0.0",
+  "description": "Benua Komputer - Service Laptop Tasikmalaya (Cloudflare Pages + D1)",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herulife/service.git"
+  },
+  "license": "ISC"
+}

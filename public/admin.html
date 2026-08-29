@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Booking - Benua Komputer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+    <div class="container py-4">
+      <h2 class="mb-3">Dashboard Booking - Benua Komputer</h2>
+
+      <div class="input-group mb-3" style="max-width: 480px">
+        <input
+          type="password"
+          id="token"
+          class="form-control"
+          placeholder="Admin Token"
+        />
+        <button class="btn btn-dark" onclick="saveToken()">Simpan</button>
+        <button class="btn btn-primary" onclick="load()">Muat Data</button>
+      </div>
+
+      <div id="msg" class="mb-3"></div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <thead class="table-secondary">
+            <tr>
+              <th>#</th>
+              <th>Waktu</th>
+              <th>Nama</th>
+              <th>WA</th>
+              <th>Merk</th>
+              <th>Keluhan</th>
+              <th>Wilayah</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+      const tokenInput = $("token");
+
+      if (localStorage.getItem("admin_token")) {
+        tokenInput.value = localStorage.getItem("admin_token");
+      }
+
+      function saveToken() {
+        localStorage.setItem("admin_token", tokenInput.value);
+        $("msg").innerHTML =
+          '<div class="alert alert-success">Token disimpan di browser ini.</div>';
+      }
+
+      function waLink(wa) {
+        const n = wa.replace(/[^0-9]/g, "");
+        return "https://api.whatsapp.com/send?phone=62" + n.slice(-12);
+      }
+
+      async function load() {
+        const token = tokenInput.value.trim();
+        if (!token) {
+          $("msg").innerHTML =
+            '<div class="alert alert-warning">Masukkan admin token dulu.</div>';
+          return;
+        }
+        $("msg").innerHTML = '<div class="alert alert-info">Memuat...</div>';
+        try {
+          const res = await fetch("/api/admin?token=" + encodeURIComponent(token));
+          if (res.status === 401) {
+            $("msg").innerHTML =
+              '<div class="alert alert-danger">Token salah.</div>';
+            return;
+          }
+          const rows = await res.json();
+          render(rows);
+          $("msg").innerHTML =
+            '<div class="alert alert-success">' +
+            rows.length +
+            " booking ditemukan.</div>";
+        } catch (e) {
+          $("msg").innerHTML =
+            '<div class="alert alert-danger">Gagal memuat data.</div>';
+        }
+      }
+
+      function render(rows) {
+        const tb = $("rows");
+        tb.innerHTML = "";
+        rows.forEach((r) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML =
+            "<td>" + r.id + "</td>" +
+            "<td>" + r.created_at + "</td>" +
+            "<td>" + esc(r.name) + "</td>" +
+            '<td><a href="' + waLink(r.wa) + '" target="_blank">' + esc(r.wa) + "</a></td>" +
+            "<td>" + esc(r.merk || "-") + "</td>" +
+            "<td>" + esc(r.kerusakan) + "</td>" +
+            "<td>" + esc(r.kecamatan || "-") + "</td>" +
+            "<td><span class='badge bg-" + badge(r.status) + "'>" + esc(r.status) + "</span></td>" +
+            "<td>" +
+            '<select class="form-select form-select-sm" id="s' + r.id + '">' +
+            ["baru", "diproses", "selesai", "batal"].map((s) =>
+              "<option " + (s === r.status ? "selected" : "") + ">" + s + "</option>"
+            ).join("") +
+            "</select>" +
+            '<button class="btn btn-sm btn-outline-primary mt-1" onclick="update(' + r.id + ')">Update</button>' +
+            "</td>";
+          tb.appendChild(tr);
+        });
+      }
+
+      async function update(id) {
+        const token = tokenInput.value.trim();
+        const status = $("s" + id).value;
+        const res = await fetch("/api/admin", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            "x-admin-token": token,
+          },
+          body: JSON.stringify({ id, status }),
+        });
+        if (res.ok) load();
+        else alert("Gagal update");
+      }
+
+      function badge(s) {
+        return { baru: "secondary", diproses: "warning", selesai: "success", batal: "danger" }[s] || "secondary";
+      }
+      function esc(t) {
+        return (t || "").toString().replace(/[&<>"]/g, (c) =>
+          ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])
+        );
+      }
+
+      if (localStorage.getItem("admin_token")) load();
+    </script>
+  </body>
+</html>

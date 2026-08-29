@@ -1,0 +1,13 @@
+name = "benuatech"
+pages_build_output_dir = "public"
+compatibility_date = "2024-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Binding D1 (SQLite di Cloudflare). Isi database_id setelah membuat D1 (lihat DEPLOY.md)
+[[d1_databases]]
+binding = "DB"
+database_name = "benua_db"
+database_id = "eed67082-1273-495d-8436-5d644bb013a6"
+
+# ADMIN_TOKEN di-set lewat: wrangler pages secret put ADMIN_TOKEN --project-name benuatech
+# (jangan tulis token di sini)

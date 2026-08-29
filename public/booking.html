@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Form booking service laptop Tasikmalaya. Daftar antrian servis cepat & bergaransi dari Benua Komputer. WA 0821-1475-2228"
+    />
+    <meta name="geo.region" content="ID-JB" />
+    <meta name="geo.placename" content="Tasikmalaya" />
+    <title>Booking Service Laptop Tasikmalaya | Benua Komputer</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/tooplate-clean-work.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-12 d-flex flex-wrap">
+            <p class="d-flex me-4 mb-0">
+              <i class="bi-house-fill me-2"></i> Benua Komputer
+            </p>
+            <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
+              <i class="site-header-icon bi-whatsapp me-2"></i>
+              <a
+                href="https://api.whatsapp.com/send?phone=6282114752228&text=Salam%20Benua%20Komputer"
+                class="text-white"
+                >0821-1475-2228</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro-section section-padding">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-lg-8 col-12">
+              <h1 class="mb-3">Booking Service Laptop Tasikmalaya</h1>
+              <p class="text-muted">
+                Isi form di bawah, kami akan hubungi Anda. Atau langsung chat
+                WhatsApp untuk respons lebih cepat.
+              </p>
+
+              <form id="bookingForm" class="mt-4">
+                <div class="mb-3">
+                  <label class="form-label">Nama Lengkap *</label>
+                  <input type="text" name="name" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Nomor WhatsApp *</label>
+                  <input
+                    type="text"
+                    name="wa"
+                    class="form-control"
+                    placeholder="08xxxx"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Merk Laptop</label>
+                  <input
+                    type="text"
+                    name="merk"
+                    class="form-control"
+                    placeholder="Asus / Axioo / Lenovo / dll"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Kecamatan / Wilayah</label>
+                  <select name="kecamatan" class="form-select">
+                    <option value="">-- Pilih --</option>
+                    <option>Cibeureum</option>
+                    <option>Singaparna</option>
+                    <option>Indihiang</option>
+                    <option>Mangkubumi</option>
+                    <option>Rajapolah</option>
+                    <option>Lainnya</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Keluhan / Kerusakan *</label>
+                  <textarea
+                    name="kerusakan"
+                    class="form-control"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Kirim Booking
+                </button>
+              </form>
+
+              <div id="result" class="mt-4"></div>
+
+              <a href="index.html" class="btn btn-outline-secondary mt-3"
+                >&larr; Kembali ke Beranda</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-12 text-center">
+            <p class="copyright-text mb-0">
+              Copyright © 2026 Benua Komputer &middot; Service Laptop
+              Tasikmalaya
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById("bookingForm");
+      const result = document.getElementById("result");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        result.innerHTML =
+          '<div class="alert alert-info">Mengirim...</div>';
+        const data = Object.fromEntries(new FormData(form).entries());
+        try {
+          const res = await fetch("/api/booking", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+          const out = await res.json();
+          if (out.ok) {
+            result.innerHTML =
+              '<div class="alert alert-success">Booking terkirim! Silakan lanjut ke WhatsApp untuk konfirmasi.<br><a class="btn btn-success mt-2" href="' +
+              out.waLink +
+              '">Chat WhatsApp Admin</a></div>';
+            form.reset();
+          } else {
+            result.innerHTML =
+              '<div class="alert alert-danger">' +
+              (out.error || "Gagal mengirim") +
+              "</div>";
+          }
+        } catch (err) {
+          result.innerHTML =
+            '<div class="alert alert-danger">Terjadi kesalahan jaringan.</div>';
+        }
+      });
+    </script>
+  </body>
+</html>
