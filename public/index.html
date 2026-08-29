@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Service Laptop Tasikmalaya | Benua Komputer — Hardware & Software</title>
+    <title>Benua Komputer | Servis Laptop, Komputer & Jaringan Tasikmalaya</title>
     <meta
       name="description"
-      content="Service laptop Tasikmalaya & sekitarnya. Spesialis hardware & software: mati total, install OS, service mainboard, LED. Bisa ditunggu di tempat, bergaransi. WA 0821-1475-2228"
+      content="Benua Komputer sejak 2015: servis laptop, komputer, jaringan dan CCTV di Tasikmalaya & sekitarnya. Teknisi berpengalaman, bergaransi, bisa ditunggu. WA 0821-1475-2228"
     />
     <meta name="author" content="Benua Komputer" />
     <meta name="geo.region" content="ID-JB" />
@@ -15,11 +15,8 @@
     <meta name="ICBM" content="-7.3273, 108.2207" />
     <link rel="canonical" href="https://benuatech.my.id/" />
 
-    <meta property="og:title" content="Service Laptop Tasikmalaya | Benua Komputer" />
-    <meta
-      property="og:description"
-      content="Spesialis Service Laptop & Macbook di Tasikmalaya. Hardware & Software, mati total, install OS, service mainboard, LED. Bisa ditunggu, bergaransi."
-    />
+    <meta property="og:title" content="Benua Komputer | Servis Laptop & Komputer Tasikmalaya" />
+    <meta property="og:description" content="Servis laptop, komputer, jaringan dan CCTV di Tasikmalaya. Teknisi berpengalaman, bergaransi." />
     <meta property="og:image" content="https://benuatech.my.id/images/baru/laptop2.jpg" />
     <meta property="og:url" content="https://benuatech.my.id/" />
     <meta property="og:type" content="website" />
@@ -27,12 +24,50 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link href="css/bootstrap-icons.css" rel="stylesheet" />
     <link href="css/benua.css" rel="stylesheet" />
+    <style>
+      /* Logis-inspired additions - purpose: institutional, calm, readable */
+      .topbar{background:var(--ink);color:#cfc9bd;font-size:.86rem;border-bottom:1px solid #2a2926}
+      .topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:8px 24px;flex-wrap:wrap}
+      .topbar a{color:#cfc9bd}
+      .topbar a:hover{color:#fff}
+      .topbar-left,.topbar-right{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+      .topbar-dot{opacity:.4}
+      .header-main{background:var(--surface);border-bottom:1px solid var(--border)}
+      .header-main .container{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+      .search-box{flex:1;max-width:360px;display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:8px 14px}
+      .search-box input{border:0;background:transparent;flex:1;font-family:var(--font-body);font-size:.92rem;color:var(--ink);outline:none}
+      .search-box i{color:var(--muted)}
+      .nav-wrap{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:40}
+      .main-nav{display:flex;gap:2px;align-items:center;height:48px;overflow-x:auto;scrollbar-width:none}
+      .main-nav::-webkit-scrollbar{display:none}
+      .nav-item{position:relative}
+      .nav-item>a{display:flex;align-items:center;gap:6px;padding:10px 14px;font-weight:600;font-size:.92rem;color:var(--ink);white-space:nowrap;border-radius:8px}
+      .nav-item>a:hover{background:var(--bg)}
+      .nav-item.has-sub>a::after{content:"▾";font-size:.7rem;opacity:.6}
+      .sub-menu{position:absolute;top:100%;left:0;min-width:210px;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow-hover);padding:8px;display:none;z-index:10}
+      .nav-item:hover .sub-menu{display:block}
+      .sub-menu a{display:block;padding:9px 12px;font-size:.9rem;color:var(--ink);border-radius:6px}
+      .sub-menu a:hover{background:var(--bg);color:var(--accent-strong)}
+      .hero-logis{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+      .hero-logis img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
+      .hero-logis .copy{padding:28px}
+      .hero-logis .copy h2{margin-bottom:8px}
+      .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+      .post-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+      .post-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+      .post-card .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+      .post-meta{font-size:.82rem;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+      .post-card h3{font-size:1.05rem;margin:0;line-height:1.35}
+      .post-card p{font-size:.92rem;color:var(--muted);margin:0}
+      .post-card .more{margin-top:auto;font-weight:600;font-size:.88rem}
+      .location-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+      .contact-form{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px}
+      @media(max-width:900px){.hero-logis{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr 1fr}.location-grid{grid-template-columns:1fr}}
+      @media(max-width:640px){.blog-grid{grid-template-columns:1fr}.header-main .container{height:auto;padding:12px 24px;flex-wrap:wrap}.search-box{max-width:100%;order:3;flex-basis:100%}}
+    </style>
 
     <script type="application/ld+json">
       {
@@ -59,88 +94,233 @@
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="/" aria-label="Benua Komputer beranda">
-          <span class="brand-mark">B</span>
-          <span>Benua Komputer<small>Service Laptop Tasikmalaya</small></span>
-        </a>
-        <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
-          <a href="#layanan">Layanan</a>
-          <a href="#wilayah">Wilayah</a>
-          <a href="#testimoni">Testimoni</a>
-          <a href="blog-laptop-mati-total.html">Blog</a>
-        </nav>
-        <div class="nav-cta">
-          <a class="wa-pill" href="https://api.whatsapp.com/send?phone=6282114752228&text=Salam%20Benua%20Komputer">
-            <i class="bi bi-whatsapp"></i> 0821-1475-2228
-          </a>
-          <a class="btn btn--primary" href="booking.html">Booking</a>
-          <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <!-- Top bar institutional -->
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar-left">
+          <a href="mailto:candraloka81@gmail.com"><i class="bi bi-envelope"></i> candraloka81@gmail.com</a>
+          <span class="topbar-dot">|</span>
+          <a href="https://api.whatsapp.com/send?phone=6282114752228"><i class="bi bi-whatsapp"></i> +62 821-1475-2228</a>
+        </div>
+        <div class="topbar-right">
+          <a href="kontak.html">Kontak</a>
+          <a href="sitemap.xml">Sitemap</a>
+          <a href="#faq">FAQ</a>
+          <a href="#informasi">Informasi</a>
         </div>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Spesialis Hardware &amp; Software</p>
-            <h1>Laptop rusak? Di Tasik, kami yang benerin.</h1>
-            <p class="lead">
-              Benua Komputer melayani service laptop &amp; MacBook di Tasikmalaya —
-              dari mati total sampai ganti layar. Pengerjaan <strong>bisa ditunggu</strong>,
-              hasil <strong>bergaransi</strong>, dan teknisi sudah puluhan tahun di
-              dunia reparasi.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn--primary" href="booking.html">Booking Service</a>
-              <a
-                class="btn btn--ghost"
-                href="https://api.whatsapp.com/send?phone=6282114752228&text=Salam%20Benua%20Komputer"
-                >Chat WhatsApp</a
-              >
-            </div>
-            <div class="hero-meta">
-              <div><strong>Bisa ditunggu</strong> Selesai di tempat, tak perlu tinggal</div>
-              <div><strong>Garansi</strong> Hasil servis bergaransi</div>
-              <div><strong>Jam buka</strong> Senin–Sabtu 08.00–20.30</div>
+    <!-- Header with logo and search -->
+    <div class="header-main">
+      <div class="container">
+        <a class="brand" href="/" aria-label="Benua Komputer beranda">
+          <span class="brand-mark">B</span>
+          <span>Benua Komputer<small>Servis Laptop Tasikmalaya</small></span>
+        </a>
+        <label class="search-box" aria-label="Cari artikel">
+          <i class="bi bi-search"></i>
+          <input id="search" type="search" placeholder="Cari artikel, layanan, tips" />
+        </label>
+        <a class="wa-pill" href="https://api.whatsapp.com/send?phone=6282114752228&text=Salam%20Benua%20Komputer">
+          <i class="bi bi-whatsapp"></i> 0821-1475-2228
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation like logiskomputer -->
+    <nav class="nav-wrap" aria-label="Navigasi utama">
+      <div class="container">
+        <div class="main-nav">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item has-sub">
+            <a href="#tentang">Tentang</a>
+            <div class="sub-menu">
+              <a href="kontak.html">Company Profile</a>
+              <a href="#wilayah">Wilayah Layanan</a>
             </div>
           </div>
-          <div class="hero-media">
-            <img src="images/baru/laptop2.jpg" alt="Teknisi Benua Komputer sedang memperbaiki laptop di Tasikmalaya" />
-            <div class="hero-badge">
-              <strong>Di Cibeureum, Tasikmalaya</strong><br />
-              Jl. Raya Awipari Tengah RT03/RW03 — langsung datang atau teknisi panggilan.
+          <div class="nav-item has-sub">
+            <a href="#layanan">Layanan</a>
+            <div class="sub-menu">
+              <a href="#layanan">Servis PC / Laptop</a>
+              <a href="#testimoni">Testimoni & Ulasan</a>
+              <a href="blog-biaya-service-laptop-tasikmalaya.html">Daftar Biaya</a>
+            </div>
+          </div>
+          <div class="nav-item"><a href="kontak.html">Toko & Alamat</a></div>
+          <div class="nav-item has-sub">
+            <a href="#galeri">Aktifitas</a>
+            <div class="sub-menu">
+              <a href="#galeri">Galeri Workshop</a>
+              <a href="#blog">Kegiatan</a>
+            </div>
+          </div>
+          <div class="nav-item has-sub">
+            <a href="#blog">Blog Artikel</a>
+            <div class="sub-menu">
+              <a href="#blog">Artikel</a>
+              <a href="blog-laptop-mati-total.html">Tutorial & Panduan</a>
+              <a href="blog-ciri-laptop-harus-service.html">Tips & Trik</a>
+            </div>
+          </div>
+          <div class="nav-item"><a href="sitemap.xml">Download</a></div>
+          <div class="nav-item has-sub">
+            <a href="#galeri">Gallery</a>
+            <div class="sub-menu">
+              <a href="#galeri">Foto</a>
+              <a href="#galeri">Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero like Logis Prakerin -->
+      <section class="section section--tight">
+        <div class="container">
+          <div class="hero-logis">
+            <img src="images/baru/laptop1.jpg" alt="Workshop Benua Komputer sedang melayani servis laptop di Tasikmalaya" />
+            <div class="copy">
+              <p class="eyebrow">Sejak 2015 di Cibeureum</p>
+              <h2>Workshop Servis Komputer di Tasikmalaya</h2>
+              <p class="lead">Pengenalan komponen, perbaikan mainboard dan pendampingan teknisi. Kami membuka workshop untuk edukasi dan layanan harian.</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+                <a class="btn btn--primary" href="#galeri">Lihat Galeri</a>
+                <a class="btn btn--ghost" href="kontak.html">Info Workshop</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- LAYANAN -->
+      <!-- Selamat datang -->
+      <section class="section section--tight" id="tentang">
+        <div class="container" style="max-width:760px">
+          <h2>Selamat datang</h2>
+          <p><strong>Benua Komputer</strong> hadir sejak 2015 dan fokus pada layanan jasa perbaikan komputer, laptop, perangkat dan komponennya, perbaikan sistem komputer, jaringan dan layanan terkait yang masih terkonsentrasi pada produk komputerisasi.</p>
+          <p class="text-muted">Kami melayani hardware dan software: laptop mati total, instal OS, service mainboard dengan reballing VGA, penggantian LCD LED, serta perawatan jaringan. Pengerjaan bisa ditunggu di workshop Awipari, hasil bergaransi.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+            <a class="btn btn--primary" href="#layanan">Selengkapnya</a>
+            <a class="btn btn--ghost" href="kontak.html">Hubungi Kami</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Agenda dan Informasi -->
+      <section class="section section--surface" id="informasi">
+        <div class="container">
+          <div class="sec-head">
+            <p class="eyebrow">Agenda dan Informasi</p>
+            <h2>Informasi pengumuman dan agenda kelembagaan</h2>
+          </div>
+          <div class="why-grid">
+            <div class="why-item" style="border-top-color:var(--trust)">
+              <h3>Jam Operasional</h3>
+              <p>Senin sampai Sabtu 08.00 sampai 20.30. Konsultasi via WhatsApp tetap dilayani di luar jam workshop.</p>
+            </div>
+            <div class="why-item">
+              <h3>Layanan Jaringan</h3>
+              <p>Instalasi jaringan komputer, remote maintenance dan perawatan sistem untuk usaha dan sekolah sekitar Tasikmalaya.</p>
+            </div>
+            <div class="why-item">
+              <h3>Garansi Hasil</h3>
+              <p>Setiap perbaikan tercatat dan bergaransi. Jika keluhan sama berulang, kami tangani tanpa biaya tambahan sesuai ketentuan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Terkini like Logis -->
+      <section class="section" id="blog">
+        <div class="container">
+          <div class="sec-head">
+            <p class="eyebrow">Blog Terkini</p>
+            <h2>Konten terbaru: Artikel, Informasi, Tutorial, Tips</h2>
+            <p class="lead">Rangkuman tulisan terbaru seputar servis dan perawatan laptop di Tasikmalaya.</p>
+          </div>
+          <div class="blog-grid" id="blogGrid">
+            <article class="post-card">
+              <img src="images/baru/laptop2.jpg" alt="Laptop mati total" />
+              <div class="body">
+                <div class="post-meta"><span>15 Jan 2026</span><span>Benua Komputer</span></div>
+                <h3><a href="blog-laptop-mati-total.html">Ciri Laptop Mati Total & Biaya Service</a></h3>
+                <p>Kenali tanda laptop mati total dan perkiraan biaya perbaikan mainboard di Tasikmalaya.</p>
+                <a class="more" href="blog-laptop-mati-total.html">Baca selengkapnya</a>
+              </div>
+            </article>
+            <article class="post-card">
+              <img src="images/baru/rebal.jpg" alt="Ganti layar laptop" />
+              <div class="body">
+                <div class="post-meta"><span>15 Jan 2026</span><span>Benua Komputer</span></div>
+                <h3><a href="blog-ganti-layar-laptop.html">Biaya Ganti Layar Laptop di Tasikmalaya</a></h3>
+                <p>Estimasi harga penggantian LCD LED berbagai ukuran dan tips memilih panel yang awet.</p>
+                <a class="more" href="blog-ganti-layar-laptop.html">Baca selengkapnya</a>
+              </div>
+            </article>
+            <article class="post-card">
+              <img src="images/baru/laptop1.jpg" alt="Ciri laptop rusak" />
+              <div class="body">
+                <div class="post-meta"><span>29 Agu 2026</span><span>Benua Komputer</span></div>
+                <h3><a href="blog-ciri-laptop-harus-service.html">7 Ciri Laptop yang Sudah Harus Di-service</a></h3>
+                <p>Tanda awal laptop perlu servis sebelum mati total: lemot, panas, restart sendiri.</p>
+                <a class="more" href="blog-ciri-laptop-harus-service.html">Baca selengkapnya</a>
+              </div>
+            </article>
+            <article class="post-card">
+              <img src="images/baru/rebal1.jpg" alt="Service Cibeureum" />
+              <div class="body">
+                <div class="post-meta"><span>29 Agu 2026</span><span>Benua Komputer</span></div>
+                <h3><a href="service-laptop-cibeureum.html">Service Laptop Cibeureum & Sekitar Tasikmalaya</a></h3>
+                <p>Jangkauan layanan untuk Cibeureum, Singaparna, Indihiang, Mangkubumi dan sekitarnya.</p>
+                <a class="more" href="service-laptop-cibeureum.html">Baca selengkapnya</a>
+              </div>
+            </article>
+            <article class="post-card">
+              <img src="images/baru/laptop2.jpg" alt="Service MacBook" />
+              <div class="body">
+                <div class="post-meta"><span>29 Agu 2026</span><span>Benua Komputer</span></div>
+                <h3><a href="blog-service-macbook-tasikmalaya.html">Service MacBook Tasikmalaya</a></h3>
+                <p>Penanganan MacBook kena air, baterai mengembang, keyboard dan logic board.</p>
+                <a class="more" href="blog-service-macbook-tasikmalaya.html">Baca selengkapnya</a>
+              </div>
+            </article>
+            <article class="post-card">
+              <img src="images/baru/laptop1.jpg" alt="Biaya service laptop" />
+              <div class="body">
+                <div class="post-meta"><span>29 Agu 2026</span><span>Benua Komputer</span></div>
+                <h3><a href="blog-biaya-service-laptop-tasikmalaya.html">Biaya Service Laptop 2026 Tasikmalaya</a></h3>
+                <p>Daftar estimasi transparan untuk berbagai jenis kerusakan, dari instal OS sampai mainboard.</p>
+                <a class="more" href="blog-biaya-service-laptop-tasikmalaya.html">Baca selengkapnya</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layanan -->
       <section class="section section--surface" id="layanan">
         <div class="container">
           <div class="sec-head">
             <p class="eyebrow">Layanan</p>
-            <h2>Yang kami tangani tiap hari</h2>
-            <p class="lead">Bukan cuma install ulang. Kami benerin sampai ke level mainboard.</p>
+            <h2>Servis PC, laptop, jaringan dan CCTV</h2>
           </div>
           <div class="services-grid">
             <article class="service-card">
               <img src="images/baru/laptop2.jpg" alt="Laptop mati total" />
               <div>
                 <h3>Laptop Mati Total</h3>
-                <p>IC power, korslet, atau tidak mau nyala sama sekali.</p>
-                <a class="more" href="booking.html">Booking &rarr;</a>
+                <p>IC power, korslet, tidak mau nyala sama sekali.</p>
+                <a class="more" href="blog-laptop-mati-total.html">Pelajari</a>
               </div>
             </article>
             <article class="service-card">
-              <img src="images/slideshow/hero.gif" alt="Install ulang Windows" />
+              <img src="images/slideshow/hero.gif" alt="Install OS" />
               <div>
-                <h3>Install OS &amp; Software</h3>
-                <p>Install Windows original, driver lengkap, bersih dari virus.</p>
-                <a class="more" href="booking.html">Booking &rarr;</a>
+                <h3>Instal OS & Software</h3>
+                <p>Windows original, driver lengkap, bersih dari virus.</p>
+                <a class="more" href="blog-biaya-service-laptop-tasikmalaya.html">Lihat biaya</a>
               </div>
             </article>
             <article class="service-card">
@@ -148,62 +328,38 @@
               <div>
                 <h3>Service Mainboard</h3>
                 <p>Reballing VGA, ganti komponen, BIOS corrupt.</p>
-                <a class="more" href="booking.html">Booking &rarr;</a>
+                <a class="more" href="blog-laptop-mati-total.html">Pelajari</a>
               </div>
             </article>
             <article class="service-card">
-              <img src="images/slideshow/laptop.jpg" alt="Service layar laptop" />
+              <img src="images/slideshow/laptop.jpg" alt="Service layar" />
               <div>
-                <h3>Service LCD &amp; LED</h3>
+                <h3>Service LCD & LED</h3>
                 <p>Ganti layar retak, berkedip, atau mati lampu.</p>
-                <a class="more" href="booking.html">Booking &rarr;</a>
+                <a class="more" href="blog-ganti-layar-laptop.html">Lihat biaya</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- WHY -->
-      <section class="section" id="kenapa">
+      <!-- Galeri Workshop -->
+      <section class="section" id="galeri">
         <div class="container">
           <div class="sec-head">
-            <p class="eyebrow">Kenapa Benua</p>
-            <h2>Tiga hal yang bikin pelanggan balik lagi</h2>
-          </div>
-          <div class="why-grid">
-            <div class="why-item">
-              <h3>Bisa ditunggu di tempat</h3>
-              <p>Datang ke workshop Cibeureum, atau teknisi datang ke rumah/kantor di Tasik &amp; sekitar.</p>
-            </div>
-            <div class="why-item">
-              <h3>Harga transparan</h3>
-              <p>Estimasi dikasih tahu sebelum bongkar. Tidak ada biaya tersembunyi di akhir.</p>
-            </div>
-            <div class="why-item">
-              <h3>Bergaransi</h3>
-              <p>Hasil servis kami garansi. Kalau sama masalahnya balik, kami benerin lagi.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- GALLERY -->
-      <section class="section section--surface">
-        <div class="container">
-          <div class="sec-head">
-            <p class="eyebrow">Workshop</p>
-            <h2>Lihat sendiri kondisi bengkel kami</h2>
+            <p class="eyebrow">Galeri</p>
+            <h2>Foto kegiatan workshop</h2>
           </div>
           <div class="gallery-grid">
-            <img src="images/baru/laptop1.jpg" alt="Pengerjaan laptop di workshop" />
-            <img src="images/baru/laptop2.jpg" alt="Teknisi sedang servis" />
-            <img src="images/baru/rebal1.jpg" alt="Alat servis mainboard" />
+            <img src="images/baru/laptop1.jpg" alt="Pengerjaan laptop di workshop Benua Komputer" />
+            <img src="images/baru/laptop2.jpg" alt="Teknisi sedang servis laptop Tasikmalaya" />
+            <img src="images/baru/rebal1.jpg" alt="Alat servis mainboard di workshop" />
           </div>
         </div>
       </section>
 
-      <!-- TESTIMONI -->
-      <section class="section" id="testimoni">
+      <!-- Testimoni -->
+      <section class="section section--surface" id="testimoni">
         <div class="container">
           <div class="sec-head sec-head--center">
             <p class="eyebrow">Testimoni</p>
@@ -211,7 +367,7 @@
           </div>
           <div class="quotes">
             <figure class="quote">
-              <p>"Asik… laptop saya sudah jalan lagi."</p>
+              <p>"Asik, laptop saya sudah jalan lagi."</p>
               <figcaption class="who"><span class="avatar">N</span><span><strong>Novi</strong><span>Cibeureum</span></span></figcaption>
             </figure>
             <figure class="quote">
@@ -222,32 +378,17 @@
               <p>"Alhamdulillah, laptop saya kembali normal."</p>
               <figcaption class="who"><span class="avatar">B</span><span><strong>Budi</strong><span>Indihiang</span></span></figcaption>
             </figure>
-            <figure class="quote">
-              <p>"Alhamdulillah, laptope urip maning."</p>
-              <figcaption class="who"><span class="avatar">K</span><span><strong>Kastori</strong><span>Mangkubumi</span></span></figcaption>
-            </figure>
-            <figure class="quote">
-              <p>"Benua Komputer memang terbaik…"</p>
-              <figcaption class="who"><span class="avatar">L</span><span><strong>Linda</strong><span>Tasikmalaya</span></span></figcaption>
-            </figure>
-            <figure class="quote">
-              <p>"Terima kasih banyak Benua, yang telah menyelamatkan laptop saya."</p>
-              <figcaption class="who"><span class="avatar">N</span><span><strong>Nova</strong><span>Rajapolah</span></span></figcaption>
-            </figure>
           </div>
         </div>
       </section>
 
-      <!-- WILAYAH -->
-      <section class="section section--surface" id="wilayah">
+      <!-- Wilayah -->
+      <section class="section" id="wilayah">
         <div class="container">
           <div class="sec-head">
             <p class="eyebrow">Wilayah Layanan</p>
-            <h2>Service laptop di Tasikmalaya &amp; sekitarnya</h2>
-            <p class="lead">
-              Datang langsung ke workshop kami di Cibeureum, atau teknisi panggilan ke
-              rumah/kantor. Area yang kami jangkau:
-            </p>
+            <h2>Service laptop di Tasikmalaya & sekitarnya</h2>
+            <p class="lead">Datang langsung ke workshop Cibeureum atau hubungi kami untuk koordinasi wilayah lain.</p>
             <div class="area-list">
               <span class="area-chip">Cibeureum</span>
               <span class="area-chip">Awipari</span>
@@ -263,49 +404,76 @@
         </div>
       </section>
 
-      <!-- FAQ -->
-      <section class="section">
+      <!-- Lokasi -->
+      <section class="section section--surface" id="lokasi">
         <div class="container">
-          <div class="sec-head sec-head--center">
-            <p class="eyebrow">Pertanyaan</p>
-            <h2>Ser­ing ditanya</h2>
+          <div class="sec-head">
+            <p class="eyebrow">Lokasi</p>
+            <h2>Temukan lokasi Benua Komputer dari peta berikut</h2>
           </div>
-          <div class="faq">
-            <details>
-              <summary>Berapa lama pengerjaan?</summary>
-              <div class="answer">Kasus ringan seperti install ulang 1–2 jam (bisa ditunggu). Servis mainboard biasanya 1–3 hari tergantung ketersediaan komponen.</div>
-            </details>
-            <details>
-              <summary>Apakah bisa datang langsung?</summary>
-              <div class="answer">Bisa. Alamat kami Jl. Raya Awipari Tengah RT03/RW03, Awipari, Kec. Cibeureum, Kota Tasikmalaya. Jam buka Senin–Sabtu 08.00–20.30.</div>
-            </details>
-            <details>
-              <summary>Apakah ada garansi?</summary>
-              <div class="answer">Ya, hasil servis kami bergaransi. Estimasi &amp; garansi dijelaskan sebelum pengerjaan dimulai.</div>
-            </details>
-            <details>
-              <summary>Bagaimana cara booking?</summary>
-              <div class="answer">Isi form di halaman Booking, atau langsung chat WhatsApp 0821-1475-2228. Kami akan konfirmasi jadwal.</div>
-            </details>
+          <div class="location-grid">
+            <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border)">
+              <iframe title="Peta Benua Komputer" src="https://maps.google.com/maps?q=-7.3273,108.2207&z=15&output=embed" style="width:100%;height:340px;border:0" loading="lazy"></iframe>
+            </div>
+            <div>
+              <h3>Alamat Benua Komputer</h3>
+              <p>Jl. Raya Awipari Tengah RT03/RW03, Awipari, Kec. Cibeureum, Kota Tasikmalaya, Jawa Barat 46196</p>
+              <p><strong>Telepon:</strong> <a href="https://api.whatsapp.com/send?phone=6282114752228">+62 821-1475-2228</a><br />
+              <strong>Email:</strong> <a href="mailto:candraloka81@gmail.com">candraloka81@gmail.com</a><br />
+              <strong>Jam:</strong> Senin sampai Sabtu 08.00 sampai 20.30</p>
+              <a class="btn btn--primary" href="kontak.html">Lihat kontak lengkap</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="section--ink section">
-        <div class="container cta-band">
-          <div>
-            <h2>Siap benerin laptop Anda?</h2>
-            <p class="lead">Booking sekarang atau chat langsung — teknisi kami siap bantu.</p>
+      <!-- Pesan Langsung like Logis -->
+      <section class="section" id="kontak">
+        <div class="container" style="max-width:760px">
+          <div class="sec-head sec-head--center">
+            <p class="eyebrow">Kontak</p>
+            <h2>Sampaikan pesan langsung</h2>
+            <p class="lead" style="margin:0 auto">Jika punya pertanyaan seputar layanan kami, silakan kirim pesan kepada customer service.</p>
           </div>
-          <div class="cta-actions">
-            <a class="btn btn--onink" href="booking.html">Booking Service</a>
-            <a
-              class="btn btn--ghost"
-              style="color:#fff;border-color:#5a564d"
-              href="https://api.whatsapp.com/send?phone=6282114752228&text=Salam%20Benua%20Komputer"
-              >WhatsApp</a
-            >
+          <form class="contact-form" id="contactForm">
+            <div class="field">
+              <label for="cName">Nama <span class="req">*</span></label>
+              <input class="input" id="cName" required placeholder="Nama Anda" />
+            </div>
+            <div class="field">
+              <label for="cWa">WhatsApp <span class="req">*</span></label>
+              <input class="input" id="cWa" required placeholder="08xxxxxxxxxx" />
+            </div>
+            <div class="field">
+              <label for="cMsg">Pesan <span class="req">*</span></label>
+              <textarea class="textarea" id="cMsg" required placeholder="Tulis pertanyaan Anda"></textarea>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Kirim via WhatsApp</button>
+            <p class="text-muted" style="font-size:.85rem;margin-top:10px">Pesan akan dibuka di WhatsApp Anda untuk dikirim ke 0821-1475-2228.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section--surface" id="faq">
+        <div class="container">
+          <div class="sec-head sec-head--center">
+            <p class="eyebrow">Pertanyaan</p>
+            <h2>Sering ditanya</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Berapa lama pengerjaan servis?</summary>
+              <div class="answer">Kasus ringan seperti instal ulang 1 sampai 2 jam bisa ditunggu. Servis mainboard biasanya 1 sampai 3 hari tergantung komponen.</div>
+            </details>
+            <details>
+              <summary>Apakah bisa datang langsung ke workshop?</summary>
+              <div class="answer">Bisa. Alamat kami Jl. Raya Awipari Tengah RT03/RW03, Awipari, Kec. Cibeureum, Kota Tasikmalaya. Buka Senin sampai Sabtu 08.00 sampai 20.30.</div>
+            </details>
+            <details>
+              <summary>Apakah ada garansi?</summary>
+              <div class="answer">Ya, hasil servis kami bergaransi. Rincian garansi dijelaskan sebelum pengerjaan.</div>
+            </details>
           </div>
         </div>
       </section>
@@ -319,47 +487,58 @@
               <span class="brand-mark">B</span>
               <span>Benua Komputer<small style="color:#9a958a">Service Laptop Tasikmalaya</small></span>
             </a>
-            <p style="margin-top:14px;max-width:34ch;color:#cfc9bd">
-              Spesialis service laptop &amp; MacBook. Hardware &amp; software, mati total,
-              install OS, mainboard, LCD/LED.
-            </p>
+            <p style="margin-top:14px;max-width:34ch;color:#cfc9bd">Spesialis service laptop dan MacBook. Hardware dan software, mati total, instal OS, mainboard, LCD LED.</p>
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <a href="https://www.facebook.com" aria-label="Facebook" style="color:#cfc9bd"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com" aria-label="Instagram" style="color:#cfc9bd"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.tiktok.com" aria-label="Tiktok" style="color:#cfc9bd"><i class="bi bi-tiktok"></i></a>
+              <a href="https://www.youtube.com" aria-label="Youtube" style="color:#cfc9bd"><i class="bi bi-youtube"></i></a>
+            </div>
           </div>
           <div>
-            <h4>Layanan</h4>
-            <a href="#layanan">Laptop Mati Total</a>
-            <a href="#layanan">Install OS</a>
-            <a href="#layanan">Service Mainboard</a>
-            <a href="#layanan">Service LCD &amp; LED</a>
-            <a href="#layanan">Komputer &amp; Jaringan</a>
+            <h4>Support</h4>
+            <a href="kontak.html">Kontak</a>
+            <a href="sitemap.xml">Sitemap</a>
+            <a href="#faq">FAQ</a>
+            <a href="blog-laptop-mati-total.html">Artikel</a>
+            <a href="blog-ciri-laptop-harus-service.html">Tips & Trik</a>
           </div>
           <div>
             <h4>Kontak</h4>
             <a href="https://api.whatsapp.com/send?phone=6282114752228&text=Salam%20Benua%20Komputer">WhatsApp: 0821-1475-2228</a>
             <a href="mailto:candraloka81@gmail.com">candraloka81@gmail.com</a>
             <a href="#wilayah">Jl. Raya Awipari Tengah RT03/RW03, Cibeureum</a>
-            <a href="blog-laptop-mati-total.html">Blog &amp; Tips</a>
-            <a href="blog-ganti-layar-laptop.html">Ganti Layar Laptop</a>
-            <a href="blog-ciri-laptop-harus-service.html">Ciri Laptop Rusak</a>
-            <a href="service-laptop-cibeureum.html">Service Cibeureum</a>
-            <a href="blog-service-macbook-tasikmalaya.html">Service MacBook</a>
-            <a href="kontak.html">Kontak &amp; Alamat</a>
-            <a href="blog-biaya-service-laptop-tasikmalaya.html">Biaya Service</a>
+            <a href="blog-laptop-mati-total.html">Blog & Tips</a>
+            <a href="kontak.html">Kontak & Alamat</a>
           </div>
         </div>
-        <div class="footer-note">
-          © 2026 Benua Komputer · Service Laptop Tasikmalaya · Senin–Sabtu 08.00–20.30
-        </div>
+        <div class="footer-note">© 2026 Benua Komputer · Service Laptop Tasikmalaya · Senin sampai Sabtu 08.00 sampai 20.30 · Desain terinspirasi logiskomputer.com</div>
       </div>
     </footer>
 
     <script>
-      (function () {
-        var t = document.getElementById("navToggle");
-        var l = document.getElementById("navLinks");
-        if (t && l) {
-          t.addEventListener("click", function () {
-            var open = l.classList.toggle("open");
-            t.setAttribute("aria-expanded", open ? "true" : "false");
+      (function(){
+        var input=document.getElementById('search');
+        var grid=document.getElementById('blogGrid');
+        if(input && grid){
+          input.addEventListener('input',function(){
+            var q=this.value.toLowerCase();
+            var cards=grid.querySelectorAll('.post-card');
+            cards.forEach(function(c){
+              c.style.display=c.textContent.toLowerCase().includes(q)?'':'none';
+            });
+          });
+        }
+        var form=document.getElementById('contactForm');
+        if(form){
+          form.addEventListener('submit',function(e){
+            e.preventDefault();
+            var n=document.getElementById('cName').value.trim();
+            var w=document.getElementById('cWa').value.trim();
+            var m=document.getElementById('cMsg').value.trim();
+            if(!n||!w||!m) return;
+            var text='Halo Benua Komputer, saya '+n+' ('+w+'). '+m;
+            window.open('https://api.whatsapp.com/send?phone=6282114752228&text='+encodeURIComponent(text),'_blank');
           });
         }
       })();
